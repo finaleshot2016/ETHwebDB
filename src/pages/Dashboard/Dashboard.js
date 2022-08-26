@@ -26,14 +26,14 @@ const Dashboard = () => {
   ];
 
   const row2 = [
-    { icon: TotalSupply, title: 'ETH HOLDINGS', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
-    { icon: CirculatingSupply, title: 'TOKEN HOLDINGS', label: `${walletData.balance} TOKENS`, value: `$${walletData.balanceInUSD}`},
+    { icon: TotalSupply, title: 'ACCOUNT ETH HOLDINGS', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
+    { icon: CirculatingSupply, title: 'ACOUNT TOKEN HOLDINGS', label: `${walletData.balance} TOKENS`, value: `$${walletData.balanceInUSD}`},
     // { icon: Holders, title: 'Holders', value: 0.0 },
-    { icon: Burn, title: 'DIVIDENDS', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
+    { icon: Burn, title: 'ACCOUNT DIVIDENDS', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
   ];
 
   const row3 = [
-    { icon: TotalSupply, title: 'TOTAL DIVIDEND CLAIMED', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
+    { icon: TotalSupply, title: 'ACCOUNT TOTAL DIVIDEND CLAIMED', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
     { icon: TotalSupply, title: 'TOTAL DIVIDENDS DISTRIBUTED', label: `${walletData.AVAXbalance} ETH`, value: `$${walletData.AVAXbalanceInUSD}`},
   ];
 
