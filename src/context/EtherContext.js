@@ -163,12 +163,6 @@ export const EtherContextProvider = ({ children }) => {
     [avaxProvider]
   );  
 
-  const getFirepitPercentage = useCallback(async (maxSupply, circSupply) => {
-    const firepitPercentage = (maxSupply - circSupply) / maxSupply * 100;
-
-    return parseFloat(firepitPercentage).toFixed(2);
-  }, []);
-
   // Account
   const calculateWallet = useCallback(async () => {
     const balance = await getAccountBalance(user);
@@ -200,10 +194,9 @@ export const EtherContextProvider = ({ children }) => {
     const maxSupply = await getMaxSupply();
     const circulatingSupply = await getCirculatingSupply();
     const circSupply = await getCircSupply();
-    const firepitPercentage = await getFirepitPercentage(maxSupply, circSupply);
 
-    setDashboardData({ avaxPrice, price: otoPrice, marketCap, totalSupply, AVAXliq, circulatingSupply, firepitPercentage, circSupply, maxSupply});
-  }, [getAvaxPrice, getLPBalance, getTokenPrice, getMarketCap, getTotalSupply, getCirculatingSupply, getFirepitPercentage, getCircSupply, getMaxSupply]);
+    setDashboardData({ avaxPrice, price: otoPrice, marketCap, totalSupply, AVAXliq, circulatingSupply, circSupply, maxSupply});
+  }, [getAvaxPrice, getLPBalance, getTokenPrice, getMarketCap, getTotalSupply, getCirculatingSupply, getCircSupply, getMaxSupply]);
 
   useEffect(() => {
     fetchData();
